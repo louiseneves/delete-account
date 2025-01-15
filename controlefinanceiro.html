@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro | Solicitação de Exclusão de Conta</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f2f2f2; }
+        .container { max-width: 600px; margin: auto; padding: 20px; background: #fff; border-radius: 10px; }
+        h2 { text-align: center; }
+        form { display: flex; flex-direction: column; }
+        input, button { margin: 10px 0; padding: 10px; }
+        button { background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Solicitação de Exclusão de Conta</h2>
+        <p>Para solicitar a exclusão da sua conta e dados, preencha as informações abaixo:</p>
+        <form id="delete-account-form">
+            <label for="username">Nome de Usuário/E-mail:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="reason">Motivo da Exclusão:</label>
+            <input type="text" id="reason" name="reason" required>
+            <button type="submit">Enviar Solicitação</button>
+        </form>
+        <p>Nota: A exclusão da conta é irreversível. Seus dados serão retidos por 30 dias antes da exclusão completa.</p>
+    </div>
+    <script>
+        document.getElementById('delete-account-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Solicitação de exclusão enviada! Verifique seu e-mail para confirmar.');
+            // Aqui, você pode adicionar a lógica para enviar a solicitação para o seu servidor
+        });
+    </script>
+</body>
+</html>
